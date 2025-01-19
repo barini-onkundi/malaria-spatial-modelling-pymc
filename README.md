@@ -1,3 +1,3 @@
-# Dengue-fever-spatial-modelling-INLA
+# Spatial modelling of dengue fever in western parts of Kenya using INLA-SPDE
 Dengue fever is a mosquito-borne disease caused by any one of four closely related dengue viruses.  Dengue fever is transmitted through the bite of an aedes mosquito infected with a dengue virus. Mosquitos become infected when it bites a person with dengue virus in their blood. However, dengue fever can’t be spread directly from one person to another person.
 Approximately 400 million people worldwide are infected with dengue virus each year, and 100 million become mildly to severely ill with dengue fever. Most cases happen in tropical areas, such as Southeast Asia, the western Pacific islands, Latin America, and Africa.
