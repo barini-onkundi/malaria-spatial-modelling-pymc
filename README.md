@@ -28,7 +28,7 @@ Covariate effects estimation with credible intervals.
 
 Generation of prediction surfaces across endemic counties.
 
-📊 Data Source
+Data Source
 This project uses simulated or anonymized survey-like data inspired by national malaria surveys and publicly available geospatial covariates (e.g., remote sensing data, population density).
 
 
