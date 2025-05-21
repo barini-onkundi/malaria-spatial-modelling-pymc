@@ -1,36 +1,36 @@
-# 🦟 Spatial Modeling of Malaria in Kenya’s Lake Region Using Bayesian Geostatistics (PyMC)
+# Spatial Modeling of Malaria in Kenya’s Lake Region Using Bayesian Geostatistics (PyMC)
 
-Malaria remains a major public health concern in Kenya, especially in the Lake Region counties—Kisumu, Homa Bay, Siaya, and Migori—where year-round transmission is driven by favorable ecological conditions for *Anopheles* mosquitoes. This project applies a Bayesian geostatistical framework to model malaria prevalence, incorporating spatial correlation and environmental predictors.
+Malaria continues to pose a significant public health burden in Kenya, with the western and coastal regions bearing a disproportionate share of the disease burden (https://www.severemalaria.org/statistics-facts-by-country/kenya). According to 2020 Kenya Malaria Indicator Survey, the Lake endemic region consisting of Kisumu, Homa Bay, Siaya, Busia, Vihiga, Bungoma and Migori recorded a prevalence ranging between 11% and 19% (https://statistics.knbs.or.ke/nada/index.php/catalog/111). Year-round transmission in these areas is sustained by ecological conditions that favor the survival and breeding of *Anopheles* mosquitoes. This project applies a Bayesian geostatistical framework to model malaria prevalence using environmental predictors. 
 
-> 📌 **Goal**: Predict malaria prevalence at unsampled locations and quantify the influence of environmental and demographic factors using a fully Bayesian spatial model implemented in Python (PyMC).
+> **Goal**: Estimate malaria prevalence at unsampled locations by leveraging environmental and demographic factors through a fully Bayesian spatial model implemented in Python using PyMC.
 
 ---
 
-## 🔍 Objectives
+## Objectives
 
-- Estimate malaria prevalence at locations without direct survey data.
+- Estimate malaria prevalence at locations without survey data.
 - Quantify the spatial heterogeneity of transmission using a spatial random field.
-- Incorporate satellite-derived covariates (e.g. EVI, rainfall, temperature).
 - Apply an efficient **Hilbert Space Gaussian Process (HSGP)** prior to enable scalable spatial modeling.
-- Generate prediction surfaces with uncertainty quantification.
+- Generate prediction surfaces with uncertainty quantification using satellite derived covariates.
 
 ---
 
-## 🧪 Methodology
+## Methodology
 
-### 🧭 Model Structure
+### Model specification
 
 The Bayesian model is built using `PyMC`, with the following key components:
 
-- **Response**: Number of malaria-positive individuals per cluster (Binomial likelihood).
+- **Response**: Number of malaria-positive individuals per survey cluster.
+- **n**: Total number of individuals tested pr survey cluster. 
 - **Predictors**: Environmental covariates extracted from high-resolution raster data.
 - **Spatial Effect**: Modeled using an HSGP prior with a Matern-3/2 kernel.
 - **Link Function**: Logit link for modeling malaria prevalence.
 - **Priors**: Weakly informative Gaussian priors on regression coefficients, Gamma prior on the GP length scale.
 
-### ✳️ Model Equation
+### Model Equation
 
-Let \( p_i \) denote the malaria prevalence at location \( i \), and \( s_i \) be the spatial effect:
+Let $\( p_i \)$ denote the malaria prevalence at location \( i \), and \( s_i \) be the spatial effect:
 
 \[
 \text{logit}(p_i) = \beta_0 + \beta_1 \cdot \text{EVI}_i + \beta_2 \cdot \text{Temp}_i + \dots + \beta_k \cdot X_{ik} + s_i
