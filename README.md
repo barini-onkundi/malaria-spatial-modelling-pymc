@@ -76,7 +76,6 @@ For full reproducibility (including R and JS preprocessing), visit the complete 
  [GitHub Repository](https://github.com/YOUR_USERNAME/malaria-spatial-model)
 
 ---
-**barini@2024**  
 _Data Science | Spatial Modeling | AI for Global Health_  
 [barini@jkuat.ac.ke]  
 
