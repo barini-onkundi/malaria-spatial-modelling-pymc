@@ -57,12 +57,6 @@ Environmental and demographic predictors used in the model are summarized below:
 
 ---
 
-## 🗂 Project Structure
-<pre><code> ## 🗂 Project Structure ``` malaria-spatial-model/ ├── notebooks/ # Jupyter/Colab notebooks for model development & plots ├── data/ # Preprocessed datasets & spatial covariates (not included) ├── models/ # PyMC model code using HSGP for spatial inference ├── output/ # Posterior summaries and prediction surfaces ├── scripts/ │ ├── preprocess_r.R # R code for raster extraction and cleaning │ └── download_rasters.js # JavaScript for bulk downloading Earth Engine assets ├── requirements.txt # Python package dependencies └── README.md # Project overview (this file) ``` </code></pre>
-
-
----
-
 ## Posterior Inference & Predictions
 
 - Posterior samples are obtained using `pm.sample()` in PyMC with appropriate tuning and convergence checks.
@@ -82,16 +76,9 @@ For full reproducibility (including R and JS preprocessing), visit the complete 
  [GitHub Repository](https://github.com/YOUR_USERNAME/malaria-spatial-model)
 
 ---
-
-## Notes
-
-- Data used here is either public (satellite) or simulated survey data due to licensing restrictions.
-- This project was developed to demonstrate skills in spatial modeling, Bayesian inference, and integrating multi-source spatial data.
-
----
-**O_@2025**  
+**barini@2024**  
 _Data Science | Spatial Modeling | AI for Global Health_  
-📫 [YourEmail@example.com]  
+[barini@jkuat.ac.ke]  
 
 ---
 
