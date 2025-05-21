@@ -32,7 +32,7 @@ The Bayesian model is built using `PyMC`, with the following key components:
 
 Let $\ p_i \$ denote the malaria prevalence at location $\ i \$, and $\ s_i \$ be the spatial effect:
 
-$\text{logit}p_i = \beta_0 + \beta_1 \cdot \text{EVI}_i + \beta_2 \cdot \text{Temp}_i + \dots + \beta_k \cdot X_{ik} + s_i$
+$\text{logit}p_i = \beta_0 + \beta_1 \cdot \text{EVI}_i + \beta_2 \cdot \text{Temp}_i + \dots + \beta_k \cdot X_{ik} + s_i\$
 
 
 The likelihood is:
