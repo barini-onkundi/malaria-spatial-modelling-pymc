@@ -1,19 +1,11 @@
 # Spatial Modeling of Malaria Prevalence Modeling in Western Endemic Zone of Kenya
 
-Malaria continues to pose a significant public health burden in Kenya, with the western and coastal regions bearing a disproportionate share of the disease burden (https://www.severemalaria.org/statistics-facts-by-country/kenya). According to 2020 Kenya Malaria Indicator Survey, the Lake endemic region consisting of Kisumu, Homa Bay, Siaya, Busia, Vihiga, Bungoma and Migori recorded a prevalence ranging between 11% and 19% (https://statistics.knbs.or.ke/nada/index.php/catalog/111). Year-round transmission in these areas is sustained by ecological conditions that favor the survival and breeding of *Anopheles* mosquitoes. This project applies a Bayesian geostatistical framework to model malaria prevalence using environmental predictors. 
+Malaria continues to pose a significant public health burden in Kenya, with the western and coastal regions bearing a disproportionate share of the disease burden (https://www.severemalaria.org/statistics-facts-by-country/kenya). The 2020 Kenya Malaria Indicator Survey reported significant malaria prevalence within the Lake endemic region, encompassing the counties of Kisumu, Homa Bay, Siaya, Busia, Vihiga, Bungoma, and Migori. Within this region, prevalence rates were observed to range from 11% to 19% (Kenya National Bureau of Statistics, 2020). The persistent year-round transmission observed in these areas is primarily attributed to favorable ecological conditions that support the sustained survival, development, and breeding cycles of Anopheles mosquitoes, the primary vectors of malaria. This project employs a Bayesian geostatistical framework to model and estimate malaria prevalence, integrating various environmental predictors to account for spatial heterogeneity and environmental drivers of disease transmission
 
-> **Goal**: Estimate malaria prevalence at unsampled locations by leveraging environmental and demographic factors through a fully Bayesian spatial model implemented in Python using PyMC.
+## Project Aim
 
----
+The primary aim of this project is to infer malaria prevalence at unobserved geographical locations by integrating environmental and demographic covariates within a comprehensive Bayesian geostatistical modeling framework. This framework will be implemented using the PyMC probabilistic programming library in Python.
 
-## Objectives
-
-- Estimate malaria prevalence at locations without survey data.
-- Quantify the spatial heterogeneity of transmission using a spatial random field.
-- Apply an efficient **Hilbert Space Gaussian Process (HSGP)** prior to enable scalable spatial modeling.
-- Generate prediction surfaces with uncertainty quantification using satellite derived covariates.
-
----
 
 ## Methodology
 
