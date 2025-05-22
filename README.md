@@ -61,7 +61,7 @@ Environmental and demographic predictors used in the model are summarized below:
 
 The main analysis notebook can be viewed via **NBViewer**:
 
-[View Notebook on NBViewer](https://nbviewer.org/github/barini-onkundi/malaria-spatial-modelling-pymc/blob/main/malaria_prevalence.ipynb)
+[View Notebook on NBViewer]()
 
 For full reproducibility (including R and JS preprocessing), included in the current repository. 
 
