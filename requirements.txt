@@ -1,0 +1,17 @@
+pillow
+arviz
+matplotlib
+numpy
+pandas
+pymc
+pytensor
+folium
+contextily
+geopandas
+mapclassify
+rasterio
+pyproj
+fiona
+shapely
+scipy
+scikit-learn
