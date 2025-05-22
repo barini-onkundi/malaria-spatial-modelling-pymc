@@ -36,7 +36,7 @@ To run this model, clone the repository and follow the instructions in `malaria_
 
 ---
 
-## 🌐 Data Sources and Predictors
+## Data Sources and Predictors
 
 Environmental and demographic predictors used in the model are summarized below:
 
@@ -46,9 +46,10 @@ Environmental and demographic predictors used in the model are summarized below:
 | **Temperature**                 | Monthly mean temperatures                 | ~1km                   | [WorldClim](https://www.worldclim.org/)                                     |
 | **Elevation**                   | Digital elevation data                    | 30m                    | [SRTM](https://earthexplorer.usgs.gov/)                                     |
 | **EVI**                         | Enhanced Vegetation Index (proxy for land cover) | 250m                   | [MODIS MOD13Q1](https://modis.gsfc.nasa.gov/data/dataproducts/mod13.php)   |
-| **Distance to Water**          | Distance to nearest water body (rasterized) | ~30m-90m               | Derived using [HydroSHEDS](https://www.hydrosheds.org/) and custom scripts |
+| **Distance to Water**          | Distance to nearest water body (rasterized) | ~30m-90m               | [HydroSHEDS](https://www.hydrosheds.org/) and custom scripts |
 | **Population Density**         | Human population per grid cell            | ~1km                   | [WorldPop](https://www.worldpop.org/)                                       |
-| **Mosquito Net Use**           | Proportion of household mosquito net use  | ~5km                   | DHS survey, rasterized estimates                                            |
+| **Mosquito Net Use**           | Proportion of household mosquito net use  | ~1km                   | [Malaria Atlas Project (MAP)](https://malariaatlas.org/)  
+| **Malaria prevalence**         |  Plasmodium falciparum parasite rate       | NA                    |  [Malaria Atlas Project (MAP)](https://malariaatlas.org/) |
 
 ---
 
