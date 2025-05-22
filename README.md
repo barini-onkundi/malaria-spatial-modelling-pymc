@@ -30,10 +30,6 @@ Where:
 * $\beta_1, \dots, \beta_7$ are the **coefficients** for the environmental and demographic covariates, which include Enhanced Vegetation Index ($\text{evi}$), temperature ($\text{temp}$), precipitation ($\text{precip}$), distance to nearest health facility ($\text{dist}$), elevation ($\text{elev}$), net usage ($\text{net}$), and population density ($\text{pop}$).
 * $S(x_i)$ is a **zero-mean Gaussian Process** with a Matérn covariance function ($\nu=3/2$). We'll approximate this spatial effect using a **Hilbert Space Gaussian Process (HSGP)** to efficiently capture geographical correlation.
 
-## Usage
-
-To run this model, clone the repository and follow the instructions in `malaria_prevalence.ipynb`.
-
 ---
 
 ## Data Sources and Predictors
