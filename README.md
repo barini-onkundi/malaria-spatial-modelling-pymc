@@ -1,4 +1,4 @@
-# Spatial Modeling of Malaria in Kenya’s Lake Region Using Bayesian Geostatistics (PyMC)
+# Spatial Modeling of Malaria Prevalence Modeling in Western Endemic Zone of Kenya
 
 Malaria continues to pose a significant public health burden in Kenya, with the western and coastal regions bearing a disproportionate share of the disease burden (https://www.severemalaria.org/statistics-facts-by-country/kenya). According to 2020 Kenya Malaria Indicator Survey, the Lake endemic region consisting of Kisumu, Homa Bay, Siaya, Busia, Vihiga, Bungoma and Migori recorded a prevalence ranging between 11% and 19% (https://statistics.knbs.or.ke/nada/index.php/catalog/111). Year-round transmission in these areas is sustained by ecological conditions that favor the survival and breeding of *Anopheles* mosquitoes. This project applies a Bayesian geostatistical framework to model malaria prevalence using environmental predictors. 
 
