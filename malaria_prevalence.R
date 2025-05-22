@@ -1,3 +1,4 @@
+#---this code is for donwloading malaria data from malaria atlas map
 #---install malaria atlas package
 install.packages("malariaAtlas") 
 
