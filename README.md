@@ -19,25 +19,28 @@ Malaria continues to pose a significant public health burden in Kenya, with the 
 
 ### Model specification
 
-The Bayesian model is built using `PyMC`, with the following key components:
+We're using a **binomial likelihood model** to analyze malaria prevalence. For each location $i$, the observed number of positive cases, $Y_i$, is modeled as:
 
-- **Response**: Number of malaria-positive individuals per survey cluster.
-- **n**: Total number of individuals tested pr survey cluster. 
-- **Predictors**: Environmental covariates extracted from high-resolution raster data.
-- **Spatial Effect**: Modeled using an HSGP prior with a Matern-3/2 kernel.
-- **Link Function**: Logit link for modeling malaria prevalence.
-- **Priors**: Weakly informative Gaussian priors on regression coefficients, Gamma prior on the GP length scale.
+$$Y_i \sim \text{Binomial}(n_i, P(x_i))$$
 
-### Model Equation
+Here, $n_i$ represents the total number of individuals tested for malaria at location $x_i$, and $P(x_i)$ is the underlying prevalence of malaria at that specific location.
 
-Let $\ p_i \$ denote the malaria prevalence at location $\ i \$, and $\ s_i \$ be the spatial effect:
+---
 
-$\text{logit}p_i = \beta_0 + \beta_1 \cdot \text{EVI}_i + \beta_2 \cdot \text{Temp}_i + \dots + \beta_k \cdot X_{ik} + s_i\$
+To link the prevalence $P(x_i)$ to our covariates, we use a logit link function:
 
+$$\text{logit}(P(x_i)) = \beta_0 + \beta_1 \cdot \text{evi} + \beta_2 \cdot \text{temp} + \beta_3 \cdot \text{precip} + \beta_4 \cdot \text{dist} + \beta_5 \cdot \text{elev} + \beta_6 \cdot \text{net} + \beta_7 \cdot \text{pop} + S(x_i)$$
 
-The likelihood is:
+---
 
-$\text{Pos}_i \sim \text{Binomial}(n_i, p_i)$
+In this equation:
+* $\beta_0$ is the **intercept**.
+* $\beta_1, \dots, \beta_7$ are the **coefficients** for the environmental and demographic covariates, which include Enhanced Vegetation Index ($\text{evi}$), temperature ($\text{temp}$), precipitation ($\text{precip}$), distance to nearest health facility ($\text{dist}$), elevation ($\text{elev}$), net usage ($\text{net}$), and population density ($\text{pop}$).
+* $S(x_i)$ is a **zero-mean Gaussian Process** with a Matérn covariance function ($\nu=3/2$). We'll approximate this spatial effect using a **Hilbert Space Gaussian Process (HSGP)** to efficiently capture geographical correlation.
+
+## Usage
+
+To run this model, clone the repository and follow the instructions in `malaria_prevalence.ipynb`.
 
 ---
 
